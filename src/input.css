@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body{
+    box-sizing:border-box;
+}
+
+
+
+
+.black-ops one-regular {
+    font-family: "Black Ops One", system-ui;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 800
+
+.open-sans-opsans {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+  title{
+    font-family:'Black Ops One';
+  }
+
+  .navtxt{
+    font-family:'Black Ops One';
+  }
+
+  .cfont{
+    font-family:'Black Ops One'
+}
+
+.mfont{
+  font-family:'Black Ops One'
+}
+
+.dfont{
+    font-family:'Open Sans'
+}
+
+
+  body::-webkit-scrollbar{
+    width:0.5rem;
+  }
+
+  body::-webkit-scrollbar-track{
+    background:#1e1e24;
+  }
+
+  body::-webkit-scrollbar-thumb{
+    background:#4E5964;
+  }
+
+  /* .logos-slide img{
+    height:50px;
+  } */
+
+  @keyframes slide1{
+    from{transform:translateX(0)}
+    to{transform:translateX(-100%)}
+    
+  }
+  
+  /* .logos{
+    position:relative;
+  }
+
+  .logos:before{
+    position:absolute;
+    top:0;
+    left:0;
+    width:250px;
+    height:100%;
+    background:linear-gradient(to left,rgba(255,255,255,0),red);
+  }
+  .logos:after{
+
+  } */
+  .logos-slide{
+    animation:10s slide1 infinite linear;
+    animation-iteration-count: infinite;
+  }
+
+  .logos:hover .logos-slide{
+    animation-play-state:paused;
+  }
+
+  
+  
+@media only screen and (min-width:768px){
+
+  .cfont {
+    /* background-image: url(../images/Untitled\ Design\ \(3\).png);  */
+    scale:.9; opacity:0.2;
+    animation:fade-in linear forwards;
+    animation-timeline:view();
+    animation-range:contain 50px;
+  }
+  @keyframes fade-in {
+    to{scale:1.2; opacity:1.5;}
+  }
+}
+
+@media only screen and (min-width:768px){
+
+  .mfont {
+    /* background-image: url(../images/Untitled\ Design\ \(3\).png);  */
+    scale:2; opacity:0;
+    animation:fade-in linear forwards;
+    animation-timeline:view();
+    animation-range:contain 50px;
+  }
+  @keyframes fade-in {
+    to{scale:1.2; opacity:1;}
+  }
+}
+
